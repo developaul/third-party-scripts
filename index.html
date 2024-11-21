@@ -8,6 +8,18 @@
       content="This page is the home page with third party scripts."
     />
     <title>Home third party scripts</title>
+    <!-- 1. Configuración de Partytown para GTM -->
+    <script>
+      partytown = {
+        forward: ["dataLayer.push"], // Necesario para que GTM funcione
+      };
+    </script>
+
+    <!-- 2. Snippet de Partytown (el inicializador) -->
+    <script>
+      /* Aquí va el snippet de Partytown */
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -21,6 +33,7 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-PDP3JZWL");
     </script>
+
     <!-- End Google Tag Manager -->
   </head>
   <body>
