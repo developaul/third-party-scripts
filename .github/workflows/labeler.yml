@@ -2,12 +2,16 @@ name: Labeler
 
 on: [pull_request]
 
+permissions:
+  pull-requests: write
+  issues: write
+
 jobs:
   labeler:
     runs-on: ubuntu-latest
     name: Label the PR
     steps: 
       - name: Pull request size labeler
-        uses: developaul/pr-size-labeler@v1.0.4
+        uses: developaul/pr-size-labeler@v1.0.5
         with: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
