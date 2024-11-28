@@ -12,6 +12,10 @@ jobs:
     name: Label the PR
     steps: 
       - name: Pull request size labeler
-        uses: developaul/pr-size-labeler@v1.0.5
+        uses: developaul/pr-size-labeler@main
         with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          xs_max_size: "100"
+          s_max_size: "200"
+          m_max_size: "300"
+          l_max_size: "400"
